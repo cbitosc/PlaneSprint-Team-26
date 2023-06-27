@@ -99,7 +99,6 @@ app.get('/nests/:id', async (req, res) => {
     return res.status(404).send('Nest not found');
   }
   console.log(nest);
-  console.log("madda");
   res.render('nestpage', { nest: nest });
 });
 
