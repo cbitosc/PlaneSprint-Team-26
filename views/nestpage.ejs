@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nesty</title>
+    <link rel="stylesheet" href="/stylesheets/property.css">
+    <style>
+        .hidden{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <ul id="card">
+        <li><img src="https://a0.muscache.com/im/pictures/9caaca2d-6892-4638-b675-6a879974f5ed.jpg?im_w=1680" alt="" style="width: 20rem;"></li>
+        <li><%= nest.propertyName %></li>
+        <li>Nest at <%= nest.propertyPlace %></li>
+        <li>Price per Night: <%= nest.propertyRate %></li>
+        <li>Owner: <%= nest.propertyOwner %></li>
+    </ul>
+
+    <form action="/checkout" method="post">
+        <input type="date" name="from" placeholder="from">
+        <input type="date" name="to" placeholder="to">
+        <input class="hidden" type="text" name="propertyName" value="<%= nest.propertyName %>">
+        <input class="hidden" type="text" name="propertyPlace" value="<%= nest.propertyPlace %>">
+        <input class="hidden" type="text" name="propertyRate" value="<%= nest.propertyRate %>">
+        <input class="hidden" type="text" name="propertyOwner" value="<%= nest.propertyOwner %>">
+        <button type="submit">Go</button>
+    </form>
+</body>
+</html>

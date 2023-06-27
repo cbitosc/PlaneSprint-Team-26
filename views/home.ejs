@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Nesty</title>
+    <link rel="stylesheet" href="home_styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&display=swap" rel="stylesheet">
+    
+</head>
+<body>
+    <div class="navbar">
+        <div class="navl">
+            <p>Nesty</p>
+        </div>
+        <a class="navb">Rent Place</button>
+        <a class="navb" href="/login">Login</button>
+        <a class="navb" href="/register">SignUp</button>
+
+        
+    </div>
+    <div class="container">
+        <div class="in" >
+        <div class="form-container">
+            <h2>Book Now!!!</h2>
+            <form class="formdiv">
+                <div class="form-group">
+              
+                        <input type="text" id="location" name="location" placeholder="Location">
+                  
+                    
+                </div>
+                <div class="form-group" id="bkdate">
+                    <div class="from">   
+                        <label for="from_date" class="date">From</label>
+                        <input type="date" id="from_date" name="from_date" class="date"required>
+                    </div>
+                    <div class="to">
+                        <label for="to_date" class="date">To</label>
+                        <input type="date" id="to_date" name="to_date" class="date"required>
+                    </div>
+                </div>
+                <div class="form-group" id="bkdate">
+                    <div class="from">   
+                        <label for="adults" class="date">Adults</label>
+                        <input type="number" id="from_date" name="adults" class="date"required>
+                    </div>
+                    <div class="to">
+                        <label for="children" class="date">Children</label>
+                        <input type="number" id="to_date" name="children" class="date">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Search">
+                </div>
+            </form>
+        </div>
+        </div>
+        <div class="image">
+            <img src="image/home_img.jpg" style="height: 100%;width:50%;border-radius: 25px;">
+        </div>
+    </div>
+</body>
+</html>
