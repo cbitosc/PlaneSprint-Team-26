@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nesty</title>
+    <link rel="stylesheet" href="/stylesheets/property.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        .hidden{
+            display: none;
+        }
+        #card {
+            margin: 5rem auto;
+            width: 40rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items:center;
+            background-color: aquamarine;
+            border-radius: 10px;
+            box-shadow: 2px 2px 3px rgb(155, 149, 149);
+            background-color: #fff;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-bottom: 10px;
+            padding: 10px;
+            transition: transform 0.2s;
+        }
+        body {
+            font-family:'Space Grotesk';
+            background-color: #f1f1f1;
+            margin: 0;
+            padding: 20px;
+        }
+        ul{
+            list-style: none;
+        }
+        form{
+            margin: 2rem auto;
+            position: absolute;
+            left: 48vw;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover{
+            background-color: #494444;
+        }
+
+    </style>
+</head>
+<body>
+    <ul id="card">
+        <li><img src="https://a0.muscache.com/im/pictures/9caaca2d-6892-4638-b675-6a879974f5ed.jpg?im_w=1680" alt="" style="width: 30rem;"></li>
+        <li><%= propertyName %></li>
+        <li>Nest at <%= propertyPlace %></li>
+        <li>Cost: <%= cost %></li>
+        <li>Owner: <%= propertyOwner %></li>
+        <li>From: <%= from %></li>
+        <li>To: <%= to %></li>
+    </ul>
+
+    <form action="/thanku" method="post">
+        
+        <input class="hidden" type="text" name="propertyName" value="<%= propertyName %>">
+        <input class="hidden" type="text" name="propertyPlace" value="<%= propertyPlace %>">
+        <input class="hidden" type="text" name="from" value="<%= from %>">
+        <input class="hidden" type="text" name="to" value="<%= to %>">
+        <button type="submit">Book!</button>
+    </form>
+</body>
+</html>

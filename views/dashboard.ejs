@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nesty</title>
+    <link rel="stylesheet" href="dashboard.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&display=swap" rel="stylesheet">
+  
+</head>
+<body>
+    <h1>Hi <%= user.username %>!</h1>
+    <form action="/dashboard" method="post">
+        <input type="text" placeholder="place">
+        <input type="date" placeholder="from">
+        <input type="date" placeholder="to">
+        <button type="submit">Go</button>
+    </form>
+    <div id="nests">
+        <% for (var i = 0; i < nests.length; i++) { %>
+            <a href="/nests/<%=nests[i]._id%>">
+                <div class="card">
+                    <ul>
+                        <li><img src="https://a0.muscache.com/im/pictures/9caaca2d-6892-4638-b675-6a879974f5ed.jpg?im_w=1680" alt=""></li>
+                        <li><strong><%= nests[i].propertyName %></strong></li>
+                        <li>Nest at <strong><%= nests[i].propertyPlace %></strong></li>
+                        <li>Price per Night: <strong><%= nests[i].propertyRate %></strong></li>
+                        <li>Owner: <%= nests[i].propertyOwner %></li>
+                    </ul>
+                </div>
+            </a>
+        <% } %>
+    </div>
+</body>
+</html>
